@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body{
+    background-color: aquamarine;
+
+}
+.decodificador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.decodificador__entrada{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+       
+}
+.decodificador__entrada__texto__texto{
+    width: 680px;
+    height: 48px;
+    font-size: 32px;
+    font-weight: 400;
+    color: #0A3871;
+    align-self:flex-start;
+}
+.decodificador__respota{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    width: 400px;
+    height: 944px;
+    margin-left: 80px;
+    
+}
+
+
