@@ -59,6 +59,13 @@ function btnCriptografar(){
     
 }
 
+function btnDescriptografar(){
+    let texto = document.querySelector('input').value;
+    valiadador(texto);
+
+    
+}
+
 
 
 
