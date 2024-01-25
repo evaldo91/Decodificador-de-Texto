@@ -45,8 +45,12 @@ body{
     margin: 2% 0% 2% -6%;
     font-size: 2rem;
     font-family: var(--fonte-priamaria);
+    color: var(--cor-seg-d);
     
     
+}
+.decodificador__entrada__texto::placeholder{
+    color: var(--cor-seg-d);
 }
 textarea{
     border: none;
@@ -133,11 +137,13 @@ textarea:focus, input:focus, select:focus {
     font-family: var(--fonte-priamaria);
     font-weight: 700;
     text-align: center;
+    padding: 1%;
 }
 .decodificador__resposta__paragrafo{
     text-align: center;
     font-family: var(--fonte-priamaria);
     font-size: 1rem;
+    padding: 1%;
 }
 
 .rodape{
