@@ -1,66 +1,64 @@
+// Criptografia
+function criptografia(texto) {
+    let separadorTexto = texto.split('');
+    
+    separadorTexto.forEach(function(caracter, i) {
+        switch (caracter) {
+            case 'e':
+                separadorTexto[i] = 'enter';
+                break;
+            case 'i':
+                separadorTexto[i] = 'imes';
+                break;
+            case 'a':
+                separadorTexto[i] = 'ai';
+                break;
+            case 'o':
+                separadorTexto[i] = 'ober';
+                break;
+            case 'u':
+                separadorTexto[i] = 'u';
+                break;
+        }
+    });
 
-//criptografia
-function criptografia(texto){
-    let parametros = /[A-Z-À-Ú-à-ú]/;
-    if(parametros.test(texto)==false){
-        let sepadorTexto = texto.split('');
-        sepadorTexto.forEach(function (caracter, i){
-            if (caracter == 'e') {
-                sepadorTexto[i] = 'enter';
-            } else if (caracter == 'i') {
-                sepadorTexto[i] = 'imes';
-            } else if (caracter == 'a') {
-                sepadorTexto[i] = 'ai';
-            } else if (caracter == 'o') {
-                sepadorTexto[i] = 'ober';
-            } else if (caracter == 'u') {
-                sepadorTexto[i] = 'u';
-            }
-        }
-        );
-            mostraRespota('h2' , sepadorTexto.join(''));
-        }else{
-            mostraRespota('p' , 'Apenas letras minúsculas e sem acento!')
-        }
+    mostraResposta('.decodificador__resposta__texto', separadorTexto.join(''));
+    resposta();
 }
-// descroptografia
-function descriptografia(texto){
-    let parametros = /[A-Z-À-Ú-à-ú]/;
-    if(parametros.test(texto)==false){
-        let descriptografia = [
-            ["a", "ai"], 
-            ["e", "enter"], 
-            ["i", "imes"], 
-            ["o", "ober"], 
-            ["u", "ufat"]]
-            ;
-        for(let i =0; i <descriptografia.length; i++){
-            if(texto.includes(descriptografia[i][1])){
-                texto = texto.replaceAll(descriptografia[i][1], descriptografia[i][0]);
-            }
-            mostraRespota('h2' , texto);
+
+// Descroptografia
+function descriptografia(texto) {
+    let descriptografia = [
+        ["a", "ai"], 
+        ["e", "enter"], 
+        ["i", "imes"], 
+        ["o", "ober"], 
+        ["u", "ufat"]
+    ];
+
+    for (let i = 0; i < descriptografia.length; i++) {
+        if (texto.includes(descriptografia[i][1])) {
+            texto = texto.replaceAll(descriptografia[i][1], descriptografia[i][0]);
         }
-        
-        
-        
-    }else{
-        mostraRespota('p' , 'Apenas letras minúsculas e sem acento!')
     }
 
+    mostraResposta('.decodificador__resposta__texto', texto);
+    resposta();
 }
 
-
-
-function mostraRespota (tag, texto){
+function mostraResposta(tag, texto) {
     let campo = document.querySelector(tag);
     campo.innerHTML = texto;
 }
 
+function removerElemento(id) {
+    let elemento = document.getElementById(id);
+    elemento.parentElement.removeChild(elemento);
+}
 
-
-
-
-
-
-
-
+function resposta() {
+    removerElemento('resImg');
+    removerElemento('resP');
+    removerElemento('resH');
+    removerSeletor('texto__resposta', 'invisivel');
+}
