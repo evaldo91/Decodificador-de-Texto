@@ -15,21 +15,25 @@
     <main class="decodificador">
         <div class="decodificador__entrada">
             <div>
-                <textarea class="decodificador__entrada__texto" cols="100" rows="16" placeholder="Digite seu texto..."></textarea>
+                <textarea class="decodificador__entrada__texto" id="textInput" cols="100" rows="16" placeholder="Digite seu texto..."
+              
+                ></textarea>
                 
             </div>
 
             <div class="decodificador__entrada__btn"> 
-                <button class="btnCriptografar">Criptografar</button>
-                <button class="btnDescriptografar">Descriptografar</button>
+                <button class="btnCriptografar" onclick="btnCriptografar()">Criptografar</button>
+                <button class="btnDescriptografar" onclick="btnDescriptografar()">Descriptografar</button>
             </div>
             
             
         </div>
-        <div class="decodificador__resposta">
-            <img class="decodificador__resposta__img" src="./assets/High quality products 1 1.svg" alt="">
-            <h2 class="decodificador__resposta__titulo">Nenhuma mensagem encontrada</h2>
-            <p class="decodificador__resposta__paragrafo">Digite um texto que você deseja criptografar ou descriptografar.</p>
+        <div class="decodificador__resposta , drp" id="dp">
+            <textarea id="texto__resposta" class="decodificador__resposta__texto , invisivel " cols="30" rows="10" readonly></textarea>
+            <img class="decodificador__resposta__img" id="resImg" src="./assets/High quality products 1 1.svg" alt="">
+            <h2 class="decodificador__resposta__titulo" id="resH">Nenhuma mensagem encontrada</h2>
+            <p class="decodificador__resposta__paragrafo" id="resP">Digite um texto que você deseja criptografar ou descriptografar.</p>
+            <button id="copia" class="btnCopia , invisivel" onclick="btnCopiar()" >Copiar</button>
         </div>
      
     </main>
@@ -40,6 +44,7 @@
    
     <script src="./js/codificador.js"></script>
     <script src="./js/btns.js"></script>
+    <script src="./js/validador.js"></script>
     
    
 </body>

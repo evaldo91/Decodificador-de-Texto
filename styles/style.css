@@ -21,81 +21,112 @@ body{
 }
 .decodificador{
     display: flex;
-    justify-content: space-evenly;
-    gap: 80px;
+    justify-content: center;
+    gap: 20%;
     margin: 2% 2% 2% 12%;
     
     
 }
 
 .decodificador__entrada{
-    width: 36%;
-    height: 70%;
+    width: 70%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 16px;
     align-items: center;
+    margin-left: 15%;
 }
 
 .decodificador__entrada__texto{
     width: 110%; 
-    resize: none; 
+    
     margin: 2% 0% 2% -6%;
     font-size: 2rem;
-    border: none;
-    background-color: transparent;
     font-family: var(--fonte-priamaria);
     
+    
 }
+textarea{
+    border: none;
+    background-color: transparent;
+    resize: none; 
+}
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+} 
 .decodificador__entrada__btn{
     display: flex;
     gap: 24px ;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    width: 100%;
+    height: 7%;
+
 }
 
 
 
 
-.btnCriptografar{
-    width: 328px;
-    height: 67px;
+.btnCriptografar, .btnDescriptografar, .btnCopia{
+    width: 70%; /* Adicionado para garantir responsividade */
+    padding: 24px;
     border-radius: 24px;
+    font-family: var(--fonte-priamaria);
+    font-size: 1rem;
+}
+
+.btnCriptografar {
     border: solid 1px var(--cor-seg-d);
     background-color: var(--cor-seg-d);
     color: var(--cor-seg-t);
-    font-family: var(--fonte-priamaria);
-    font-size: 1rem;
-
 }
-.btnDescriptografar{
-    width: 328px;
-    height: 67px;
-    border-radius: 24px;
+
+.btnDescriptografar {
     border: solid 1px var(--cor-seg-d);
     background-color: var(--cor-seg-b);
     color: var(--cor-seg-t);
-    font-family: var(--fonte-priamaria);
-    font-size: 1rem;
-
-
-
 }
 
 .decodificador__resposta{
+    box-sizing: border-box;
     background-color: var(--cor-seg-t) ;
     border-radius: 32px;
-    width: 21%;
+    width: 40%;
     margin-top: -6%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+     
+}
+.drp{
     justify-content: center;
     gap: 16px;
 }
-.decodificador__resposta__img{
+.drr{
+    gap: 32px
+}
+.decodificador__resposta__texto{
+    width: 70%;
+    height: 70%;
+    font-family: var(--fonte-priamaria);
+    font-size: 1.5rem;
+    color: var(--cor-seg-b);
+    margin-top: -50%;
+    padding: 10%;
+    
 
 }
+.btnCopia{
+    margin-bottom: -60%;
+    border: solid 1px var(--cor-seg-d);
+    background-color: var(--cor-seg-t);
+    color: var(--cor-seg-d);
+}
+
 .decodificador__resposta__titulo{
     font-size: 1.5rem;
     color: var(--cor-texto-g);
@@ -119,5 +150,11 @@ body{
     position: fixed;
     bottom: 0;
     width: 100%;
+    color: var(--cor-seg-t);
 
 }
+
+.invisivel{
+    display: none;
+}
+
