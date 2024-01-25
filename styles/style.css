@@ -1,40 +1,123 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-body{
-    background-color: aquamarine;
+:root {
+    --main-bg-color: #F3F5FC;
+    --cor-seg-d: #0A3871;
+    --cor-seg-b: #495057;
+    --cor-seg-t: #FFFFFF;
+    --cor-texto-g: #343A40;
+    --fonte-priamaria: "Inter", sans-serif;
 
 }
-.decodificador {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.logo{
+    margin: 1%;
 }
-.decodificador__entrada{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 16px;
-       
+
+body{
+    background-color: var(--main-bg-color);
+
+
 }
-.decodificador__entrada__texto__texto{
-    width: 680px;
-    height: 48px;
-    font-size: 32px;
-    font-weight: 400;
-    color: #0A3871;
-    align-self:flex-start;
-}
-.decodificador__respota{
+.decodificador{
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #FFFFFF;
-    width: 400px;
-    height: 944px;
-    margin-left: 80px;
+    justify-content: space-evenly;
+    gap: 80px;
+    margin: 2% 2% 2% 12%;
+    
     
 }
 
+.decodificador__entrada{
+    width: 36%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    align-items: center;
+}
 
+.decodificador__entrada__texto{
+    width: 110%; 
+    resize: none; 
+    margin: 2% 0% 2% -6%;
+    font-size: 2rem;
+    border: none;
+    background-color: transparent;
+    font-family: var(--fonte-priamaria);
+    
+}
+.decodificador__entrada__btn{
+    display: flex;
+    gap: 24px ;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.btnCriptografar{
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    border: solid 1px var(--cor-seg-d);
+    background-color: var(--cor-seg-d);
+    color: var(--cor-seg-t);
+    font-family: var(--fonte-priamaria);
+    font-size: 1rem;
+
+}
+.btnDescriptografar{
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    border: solid 1px var(--cor-seg-d);
+    background-color: var(--cor-seg-b);
+    color: var(--cor-seg-t);
+    font-family: var(--fonte-priamaria);
+    font-size: 1rem;
+
+
+
+}
+
+.decodificador__resposta{
+    background-color: var(--cor-seg-t) ;
+    border-radius: 32px;
+    width: 21%;
+    margin-top: -6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+}
+.decodificador__resposta__img{
+
+}
+.decodificador__resposta__titulo{
+    font-size: 1.5rem;
+    color: var(--cor-texto-g);
+    font-family: var(--fonte-priamaria);
+    font-weight: 700;
+    text-align: center;
+}
+.decodificador__resposta__paragrafo{
+    text-align: center;
+    font-family: var(--fonte-priamaria);
+    font-size: 1rem;
+}
+
+.rodape{
+    background-color: var(--cor-seg-b);
+    padding: 1%;
+    text-align: center;
+    font-family: var(--fonte-priamaria);
+    font-size: 1rem;
+    font-weight: 600;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+}
