@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+
 :root {
     --main-bg-color: #F3F5FC;
     --cor-seg-d: #0A3871;
@@ -9,6 +10,7 @@
     --fonte-priamaria: "Inter", sans-serif;
 
 }
+
 
 .logo{
     margin: 1%;
@@ -160,7 +162,51 @@ textarea:focus, input:focus, select:focus {
 
 }
 
+
 .invisivel{
     display: none;
 }
+@media (max-width: 800px) {
+    .decodificador{
+        flex-direction: column;
+        align-items: center;
+        gap: 2%;
+        justify-content: space-evenly;
+        
+        
+    }
+    .decodificador__entrada{
+        width: 100%;
+        height: 60%;
+        margin: 2%;
+        align-items: center;
+    
+    }
+    .decodificador__entrada__texto{
+        width: 90%; 
+        margin: 3% -10% 0% -10%;
+        
+    }
+    .decodificador__entrada__btn{
+        align-items: center;
+        margin-left: -10%;
+    }
+    .decodificador__resposta{
+        margin: 3% -10% 0% -20%;
+        width:90%;
+        height: 50%;
+    }
+    .decodificador__resposta__img{
+        display: none;
+    }
 
+
+ }
+ @media (max-width: 480px) {
+    body{
+        background-color: aquamarine;
+    }
+    .decodificador__entrada__btn{
+        flex-direction: column;
+    }
+}
