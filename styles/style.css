@@ -104,7 +104,7 @@ body{
     color: var(--cor-seg-d);
 }
 textarea{
-    /*border: none;*/
+    border: none;
     background-color: transparent;
     resize: none; 
 }
