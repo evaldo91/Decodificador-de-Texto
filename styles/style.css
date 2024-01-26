@@ -11,59 +11,45 @@
 
 }
 
+.cabecalho{
+    height: 30px;
+
+}
+
 
 .logo{
     margin: 1%;
 }
 
 body{
+    height: 100%;
+    width: 100%;
     background-color: var(--main-bg-color);
 
 
 }
 .decodificador{
+    width: 80%;
+    height: 80%;
     display: flex;
-    justify-content: center;
-    gap: 20%;
-    margin: 2% 2% 2% 12%;
+    gap: 5%;
+    margin: auto;
+    
+   
     
     
 }
 
-.decodificador__entrada{
-    width: 70%;
-    height: 90%;
+.decodificador__entrada{ 
+    width: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 16px;
-    align-items: center;
-    margin-left: 15%;
+    gap: 24px;
+
 }
 
-.decodificador__entrada__texto{
-    width: 110%; 
-    
-    margin: 2% 0% 2% -6%;
-    font-size: 2rem;
-    font-family: var(--fonte-priamaria);
-    color: var(--cor-seg-d);
-    
-    
-}
-.decodificador__entrada__texto::placeholder{
-    color: var(--cor-seg-d);
-}
-textarea{
-    border: none;
-    background-color: transparent;
-    resize: none; 
-}
-textarea:focus, input:focus, select:focus {
-    box-shadow: 0 0 0 0;
-    border: 0 none;
-    outline: 0;
-} 
+
+/*Botoes*/
 .decodificador__entrada__btn{
     display: flex;
     gap: 24px ;
@@ -73,16 +59,13 @@ textarea:focus, input:focus, select:focus {
     height: 7%;
 
 }
-
-
-
-
 .btnCriptografar, .btnDescriptografar, .btnCopia{
-    width: 70%; /* Adicionado para garantir responsividade */
+    width: 70%; 
     padding: 24px;
     border-radius: 24px;
     font-family: var(--fonte-priamaria);
     font-size: 1rem;
+    
 }
 
 .btnCriptografar {
@@ -96,16 +79,67 @@ textarea:focus, input:focus, select:focus {
     background-color: var(--cor-seg-b);
     color: var(--cor-seg-t);
 }
+.btnCopia{
+    margin-bottom: -60%;
+    border: solid 1px var(--cor-seg-d);
+    background-color: var(--cor-seg-t);
+    color: var(--cor-seg-d);
+}
 
+/*Text's area*/
+.decodificador__entrada__texto{
+    width: 100%;
+    min-height: 683px;
+
+    margin-top: 5%; 
+    font-size: 2rem;
+    font-family: var(--fonte-priamaria);
+    color: var(--cor-seg-d);
+
+    align-items: center;
+    
+    
+}
+.decodificador__entrada__texto::placeholder{
+    color: var(--cor-seg-d);
+}
+textarea{
+    /*border: none;*/
+    background-color: transparent;
+    resize: none; 
+}
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+} 
+.decodificador__resposta__texto{
+    width: 90%;
+    min-height: 80%;
+    font-family: var(--fonte-priamaria);
+    font-size: 1.5rem;
+    color: var(--cor-seg-b); 
+    margin-top: -50%;
+    
+    
+
+}
+
+.teste{
+    width: 20%;
+    min-height: 731px;
+    box-sizing:border-box;
+}
 .decodificador__resposta{
-    box-sizing: border-box;
-    background-color: var(--cor-seg-t) ;
-    border-radius: 32px;
-    width: 40%;
-    margin-top: -6%;
+    
+    min-height: 731px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 24px;;
+    background-color: var(--cor-seg-t) ;
+    border-radius: 32px;
+    padding: 24px;
+    
      
 }
 .drp{
@@ -115,23 +149,8 @@ textarea:focus, input:focus, select:focus {
 .drr{
     gap: 32px
 }
-.decodificador__resposta__texto{
-    width: 70%;
-    height: 70%;
-    font-family: var(--fonte-priamaria);
-    font-size: 1.5rem;
-    color: var(--cor-seg-b);
-    margin-top: -50%;
-    padding: 10%;
-    
 
-}
-.btnCopia{
-    margin-bottom: -60%;
-    border: solid 1px var(--cor-seg-d);
-    background-color: var(--cor-seg-t);
-    color: var(--cor-seg-d);
-}
+
 
 .decodificador__resposta__titulo{
     font-size: 1.5rem;
@@ -165,48 +184,4 @@ textarea:focus, input:focus, select:focus {
 
 .invisivel{
     display: none;
-}
-@media (max-width: 800px) {
-    .decodificador{
-        flex-direction: column;
-        align-items: center;
-        gap: 2%;
-        justify-content: space-evenly;
-        
-        
-    }
-    .decodificador__entrada{
-        width: 100%;
-        height: 60%;
-        margin: 2%;
-        align-items: center;
-    
-    }
-    .decodificador__entrada__texto{
-        width: 90%; 
-        margin: 3% -10% 0% -10%;
-        
-    }
-    .decodificador__entrada__btn{
-        align-items: center;
-        margin-left: -10%;
-    }
-    .decodificador__resposta{
-        margin: 3% -10% 0% -20%;
-        width:90%;
-        height: 50%;
-    }
-    .decodificador__resposta__img{
-        display: none;
-    }
-
-
- }
- @media (max-width: 480px) {
-    body{
-        background-color: aquamarine;
-    }
-    .decodificador__entrada__btn{
-        flex-direction: column;
-    }
 }

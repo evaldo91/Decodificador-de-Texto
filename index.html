@@ -13,13 +13,12 @@
         <img class="logo" src="./assets/Logo.svg" alt="logo alura">
     </header>
     <main class="decodificador">
-        <div class="decodificador__entrada">
-            <div>
-                <textarea class="decodificador__entrada__texto" id="textInput" cols="100" rows="16" placeholder="Digite seu texto..."
+        <section class="decodificador__entrada">
+            
+                <textarea class="decodificador__entrada__texto" id="textInput"  placeholder="Digite seu texto..."
               
                 ></textarea>
                 
-            </div>
 
             <div class="decodificador__entrada__btn"> 
                 <button class="btnCriptografar" onclick="btnCriptografar()">Criptografar</button>
@@ -27,14 +26,14 @@
             </div>
             
             
-        </div>
-        <div class="decodificador__resposta , drp" id="dp">
-            <textarea id="texto__resposta" class="decodificador__resposta__texto , invisivel " cols="30" rows="10" readonly></textarea>
+        </section>
+        <section class="decodificador__resposta , drp" id="dp">
+            <textarea id="texto__resposta" class="decodificador__resposta__texto , invisivel "  readonly></textarea>
             <img class="decodificador__resposta__img" id="resImg" src="./assets/High quality products 1 1.svg" alt="">
             <h2 class="decodificador__resposta__titulo" id="resH">Nenhuma mensagem encontrada</h2>
             <p class="decodificador__resposta__paragrafo" id="resP">Digite um texto que você deseja criptografar ou descriptografar.</p>
             <button id="copia" class="btnCopia , invisivel" onclick="btnCopiar()" >Copiar</button>
-        </div>
+        </section>
      
     </main>
     <footer class="rodape">
