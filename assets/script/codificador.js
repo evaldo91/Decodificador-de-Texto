@@ -22,7 +22,7 @@ function criptografia(texto) {
         }
     });
 
-    mostraResposta('.saida__de__texto', separadorTexto.join(''));
+    mostraResposta('resposta', separadorTexto.join(''));
     removerSeletor('copy', 'invisivel');
     
 }
@@ -43,7 +43,7 @@ function descriptografia(texto) {
         }
     }
 
-    mostraResposta('.saida__de__texto', texto);
+    mostraResposta('resposta', texto);
     removerSeletor('copy', 'invisivel')
     
 }

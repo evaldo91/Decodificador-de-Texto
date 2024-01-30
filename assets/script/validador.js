@@ -18,9 +18,9 @@ function validado(texto, operacao) {
 }
 
 function erroCaracteresInvalidos() {
-    mostraResposta('.saida__de__texto', 'Apenas letras minúsculas e com acento são permitidas!');
+    mostraResposta('resposta', 'Apenas letras minúsculas e com acento são permitidas!');
 }
 
 function erroTextoVazio() {
-    mostraResposta('.saida__de__texto', 'Digite um texto que você deseja criptografar ou descriptografar.');
+    mostraResposta('resposta', 'Digite um texto que você deseja criptografar ou descriptografar.');
 }

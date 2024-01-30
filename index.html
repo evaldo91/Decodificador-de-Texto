@@ -27,7 +27,13 @@
 
         </section>
         <aside>
-            <textarea  type="text" class="saida__de__texto" id="resposta" cols="30" rows="10"></textarea>
+            <textarea  type="text" class="saida__de__texto, invisivel" id="resposta" cols="30" rows="10" placeholder="teste"></textarea>
+            <div id="cr" class="content__resposta">
+                <img class="img_lupa" src="./assets/img/high.svg" alt="">
+                <h2 class="content__resposta__h2">Nenhuma mensagem encontrada</h2>
+                <p class="content__resposta__p">Digite um texto que você deseja criptografar ou descriptografar.</p>
+            </div>
+
             <button class="btnCopia , invisivel" id="copy" onclick="btnCopiar()">Copy</button>
 
         </aside>
