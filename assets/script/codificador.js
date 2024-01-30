@@ -17,13 +17,14 @@ function criptografia(texto) {
                 separadorTexto[i] = 'ober';
                 break;
             case 'u':
-                separadorTexto[i] = 'u';
+                separadorTexto[i] = 'ufat';
                 break;
         }
     });
 
-    mostraResposta('.decodificador__resposta__texto', separadorTexto.join(''));
-    resposta();
+    mostraResposta('.saida__de__texto', separadorTexto.join(''));
+    removerSeletor('copy', 'invisivel');
+    
 }
 
 // Descroptografia
@@ -42,23 +43,7 @@ function descriptografia(texto) {
         }
     }
 
-    mostraResposta('.decodificador__resposta__texto', texto);
-    resposta();
-}
-
-function mostraResposta(tag, texto) {
-    let campo = document.querySelector(tag);
-    campo.innerHTML = texto;
-}
-
-function removerElemento(id) {
-    let elemento = document.getElementById(id);
-    elemento.parentElement.removeChild(elemento);
-}
-
-function resposta() {
-    removerElemento('resImg');
-    removerElemento('resP');
-    removerElemento('resH');
-    removerSeletor('texto__resposta', 'invisivel');
+    mostraResposta('.saida__de__texto', texto);
+    removerSeletor('copy', 'invisivel')
+    
 }

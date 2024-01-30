@@ -3,48 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Decodificador de texto</title>
-    <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/style.css">
-    
-</head>
-<body>
-    <header class="cabecalho"> 
-        <img class="logo" src="./assets/Logo.svg" alt="logo alura">
-    </header>
-    <main class="decodificador">
-        <section class="decodificador__entrada">
-            
-                <textarea class="decodificador__entrada__texto" id="textInput"  placeholder="Digite seu texto..."
-              
-                ></textarea>
-                
+    <title>Decodificador</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/solid.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/fontawesome.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/brands.css"/>
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="./assets/styles/responsive.css">
 
-            <div class="decodificador__entrada__btn"> 
-                <button class="btnCriptografar" onclick="btnCriptografar()">Criptografar</button>
-                <button class="btnDescriptografar" onclick="btnDescriptografar()">Descriptografar</button>
+   </head>
+<body>
+    <header>
+        <img class="logo" src="./assets/img/Logo.svg" alt="">
+    </header>
+    <main>
+        <section>
+            <textarea type="text" class="entrada___de__texto" id="textInput" cols="30" rows="10" placeholder="Digite aqui..."></textarea>
+            <div>
+                <div class="btn__group">
+                    <button class="btnCriptografar" onclick="btnCriptografar()">Criptografar</button>
+                    <button class="btnDescriptografar" onclick="btnDescriptografar()">Descodifcar</button>
+                </div>
             </div>
-            
-            
+
         </section>
-        <section class="decodificador__resposta , drp" id="dp">
-            <textarea id="texto__resposta" class="decodificador__resposta__texto , invisivel "  readonly></textarea>
-            <img class="decodificador__resposta__img" id="resImg" src="./assets/High quality products 1 1.svg" alt="">
-            <h2 class="decodificador__resposta__titulo" id="resH">Nenhuma mensagem encontrada</h2>
-            <p class="decodificador__resposta__paragrafo" id="resP">Digite um texto que você deseja criptografar ou descriptografar.</p>
-            <button id="copia" class="btnCopia , invisivel" onclick="btnCopiar()" >Copiar</button>
-        </section>
-     
+        <aside>
+            <textarea  type="text" class="saida__de__texto" id="resposta" cols="30" rows="10"></textarea>
+            <button class="btnCopia , invisivel" id="copy" onclick="btnCopiar()">Copy</button>
+
+        </aside>
     </main>
     <footer class="rodape">
-        <p>Desenvolvido por Evaldo M. Butzke</p>
+        <p class="rodape__p">Evaldo M. Butzke</p>
+        <a class="rodape__a" href="https://github.com/evaldo91"> <i class="fa-brands fa-github , git"> </i></a>
+        <a class="rodape__a" href="https://www.linkedin.com/in/evaldo-butzke/"> <i class="fa-brands fa-linkedin , git"></i> </a>
     </footer>
 
-   
-    <script src="./js/codificador.js"></script>
-    <script src="./js/btns.js"></script>
-    <script src="./js/validador.js"></script>
+
+    <script src="./assets/script/codificador.js"></script>
+    <script src="./assets/script/validador.js"></script>
+    <script src="./assets/script/btns.js"></script>
+    <script src="./assets/script/respotas.js" ></script>
+
+
     
-   
 </body>
 </html>

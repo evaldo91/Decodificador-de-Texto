@@ -1,15 +1,18 @@
 function btnCriptografar() {
     let texto = document.querySelector('textarea').value;
     validado(texto , 'criptografar');
+    rola('.btnCopia');
 }
 
 function btnDescriptografar() {
     let texto = document.querySelector('textarea').value;
-    validadoDes(texto , 'descriptografar');
+    validado(texto , 'descriptografar');
+    rola('.btnCopia');
+
 }
 
 function btnCopiar() {
-    let textoResultado = document.querySelector('.decodificador__resposta__texto').value;
+    let textoResultado = document.getElementById('resposta').value;  // Corrigido para 'resposta'
     if (textoResultado) {
         // Copiar para a área de transferência
         navigator.clipboard.writeText(textoResultado)
@@ -20,18 +23,15 @@ function btnCopiar() {
                 console.error('Erro ao copiar texto:', err);
             });
     }
+    rola('.logo');
+    
+
+}
+function rola(tag){
+    document.querySelector(tag).scrollIntoView({behavior:'smooth'})
 }
 
-function removerSeletor(id, classe) {
-    let elemento = document.getElementById(id);
-    elemento.classList.remove(classe);
-}
 
-function validado(texto) {
-    // Adicione sua lógica de validação aqui
 
-    // Exemplo: Remover a classe 'invisivel' do elemento com id 'exemploId'
-    removerSeletor('exemploId', 'invisivel');
-}
 
-// Adicione o restante do seu código conforme necessário
+
