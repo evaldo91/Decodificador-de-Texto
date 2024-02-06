@@ -3,6 +3,7 @@ function btnCriptografar() {
     validado(texto , 'criptografar');
     rola('.btnCopia');
     invisivelRespota()
+    addDiv()
     
 
 }
@@ -51,6 +52,8 @@ function btnCopiar() {
     adiconarSeletor('copy', 'invisivel');
     removerSeletor('cr', 'invisivel');
     mostraResposta('textInput', 'Digite seu texto...');
+    topFunction();
+   
 
     
 }
@@ -65,7 +68,14 @@ function invisivelRespota() {
     adiconarSeletor('cr', 'invisivel');
     removerSeletor('resposta', 'invisivel')
 }
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
 
+  function eraseText() {
+    document.getElementById("output").value = "";
+}
 
 
 

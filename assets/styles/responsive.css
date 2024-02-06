@@ -9,19 +9,18 @@
     }
     aside{
       width: 100%;
-      height: 340px;
+      height: 300px;
       margin-top: 2%;
       
     }
-    .entrada___de__texto{
-      
-      max-height: 500px;
-      
-  
-    }
+ 
     .saida__de__texto{
-      margin: 1%;
+      width: auto;
+      
      
+    }
+    .img_lupa{
+      display: none;
     }
   
   }
@@ -37,7 +36,7 @@
     }
   
     aside{
-      height: 650px;
+      height: 630px;
       margin: 2% 0 2% 0;
     }
 
