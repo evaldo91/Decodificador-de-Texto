@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador</title>
+    <link rel="stylesheet" href="./assets/styles/reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="./assets/styles/style2.css">
+
+</head>
+<body>
+    <div class="container-fluid , header">
+        <header>
+            <img class="logo" src="./assets/img/Logo.svg" alt="">
+        </header>
+        
+    </div>
+ 
+        <div class="container-fluid">
+            <div class="col-8">
+                <div class="row, entrada">
+                    <textarea type="text" class="entrada___de__texto" id="textInput" wrap="hard" placeholder="Digite aqui..."></textarea>
+                </div>
+                <div class=" row, btn__group">
+                        <button class="btnCriptografar" onclick="btnCriptografar()">Criptografar</button>
+                        <button class="btnDescriptografar" onclick="btnDescriptografar()">Descodifcar</button>
+                </div>
+                </div>
+                <div class="col-4, saida">
+                    <div class="row">
+                        <textarea  type="text" class="saida__de__texto, invisivel"    id="resposta" placeholder="teste"></textarea>
+                        
+                    </div>
+                    <div class="row">
+                        <button class="btnCopia , invisivel" id="copy" onclick="btnCopiar()">Copy</button>
+                    </div>
+                   
+                    
+                </div>
+        </div>
+        
+        
+
+    
+        <div class="container-fluid , rodape">
+            <p class="rodape__p">Evaldo M. Butzke
+                <a class="rodape__a" href="https://github.com/evaldo91"> <i class="bi bi-github"></i></a>
+                <a class="rodape__a" href="https://www.linkedin.com/in/evaldo-butzke/"> <i class="bi bi-linkedin"></i> </a>
+            </p>
+
+        </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="./assets/script/codificador.js"></script>
+    <script src="./assets/script/validador.js"></script>
+    <script src="./assets/script/btns.js"></script>
+    <script src="./assets/script/respotas.js" ></script>
+
+</body>
+</html>
