@@ -119,16 +119,12 @@ function removerSeletor(id, classe) {
 function rola(tag){
     document.querySelector(tag).scrollIntoView({behavior:'smooth'})
 }
-function desativDivIncial(){
-    const imgRes = document.getElementById("img_res");
-    const element = document.getElementById("texto_res");
-    const pRes = document.getElementById("p_res");
-    imgRes.remove();
-    element.remove();
-    pRes.remove();
+function desativDivIncial() {
+    document.getElementById("img_res").style.display = "none";
+    document.getElementById("texto_res").style.display = "none";
+    document.getElementById("p_res").style.display = "none";
     removerSeletor('copiar', 'desativado');
     removerSeletor('resposta', 'desativado');
-
 }
 
 
