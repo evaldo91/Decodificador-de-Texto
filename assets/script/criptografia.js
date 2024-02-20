@@ -50,7 +50,7 @@ function descriptografia(texto) {
 }
 
 function validado(texto, operacao) {
-    // Corrigindo a expressão regular para aceitar apenas letras minúsculas e com acento
+    // Validador para aceitar apenas letras minúsculas e com acento
     let parametros = /[A-Z-À-Ú-à-ú]/;
 
     if (texto === '') {

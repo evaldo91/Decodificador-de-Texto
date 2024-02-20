@@ -35,6 +35,11 @@
 
 body{
     background-color: #F3F5FC;
+    height: 100vh;
+
+}
+.main{
+    box-sizing: content-box;
 }
 
 .logo{
@@ -42,12 +47,18 @@ body{
 }
 .entrada{
     align-items: center;
+    height: 80vh;
+    box-sizing: content-box;
 }
+
 .entrada__texto{
     width: 100%;
-    height: 650px;
+    height: 85%;
     padding: 2%;
+    margin: 1%;
 }
+
+
 
 .entrada__button{
     align-items: center;
@@ -79,26 +90,25 @@ body{
 .resposta{
     background-color:var(--white-t);
     border-radius: 32px;
+    align-items: center;
+    text-align: center  ;
+    padding: 2%;
+    box-sizing: content-box;
+    height: 80vh;
 }
 
 .saida__texto{
     text-align: center;
     width: 100%;
-    height: 650px;
+    height: 80%;
     margin: 1%;
     
 }
-.sainda_inicial{
-    padding-top: 50%;   
-    height: 805px;
-    align-items: center;
-    text-align: center;
+.saida_img{
+    padding: 1%;
+    margin-top: 50%;
 
 }
-.saida__respota{
-    height: 805px;
-}
-
 
 .desativado{
     display: none;
@@ -111,10 +121,6 @@ body{
     height: 67px;
 }
 
-
-.resposta__button{
-    align-items: center;
-}
 .btn__copiar{
     width: 97%;
     border-color: var(--dark-blue-300);
@@ -132,45 +138,53 @@ body{
 .rodape{
     background-color: var(--dark-blue-500);
     color: var(--white-t);
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    position: fixed;
     width: 100%;
-    align-items: center;
-    
- 
-
 }
 
-@media (max-width: 768px){
-    .entrada__texto{
-        height: 500px;
-        width: 110%;
 
+@media (max-width: 768px){
+    .entrada{
+        height: 45vh;
+        margin-bottom: 2%;
     }
-    .saida__texto{
-        width: 110%;
-        height: 300px;
-        
+    .resposta{
+        height: 25vh;
     }
+
     .saida_img{
         display: none;
     }
+    
+
+
   
 
 }
 
-@media (max-width: 576px){
-    .entrada__texto{
-        height: 260px;
-        width: 100%;
 
-    }
-    .saida__texto{
-        width: 100%;
-        height: 260px;
+@media (max-width: 576px){
+   
+    .entrada{
+        height: 70vh;
+      
         
+    }
+    .resposta{
+        margin-top: 10%;
+        margin-bottom: 10%;
+        height: 90vh;
+      
     }
     .btns{
         width: 100%;
         margin-top: 1%;
     }
+
+
+
 
 }
