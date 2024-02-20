@@ -1,4 +1,3 @@
-// Criptografia
 function criptografia(texto) {
     let separadorTexto = texto.split('');
     
@@ -23,11 +22,8 @@ function criptografia(texto) {
     });
 
     mostraResposta('resposta', separadorTexto.join(''));
-    
-    
 }
 
-// Descroptografia
 function descriptografia(texto) {
     let descriptografia = [
         ["a", "ai"], 
@@ -44,23 +40,17 @@ function descriptografia(texto) {
     }
 
     mostraResposta('resposta', texto);
-
-  
-    
 }
 
 function validado(texto, operacao) {
-    // Validador para aceitar apenas letras minúsculas e com acento
     let parametros = /[A-Z-À-Ú-à-ú]/;
 
     if (texto === '') {
         erroTextoVazio();
     } else if (!parametros.test(texto)) {
         if (operacao === 'criptografar') {
-            // Adicionando chamada para a função de criptografia
             criptografia(texto);
         } else if (operacao === 'descriptografar') {
-            // Adicionando chamada para a função de descriptografia
             descriptografia(texto);
         }
     } else {
@@ -76,14 +66,16 @@ function erroTextoVazio() {
     mostraResposta('resposta', 'Digite um texto que você deseja criptografar ou descriptografar.');
 }
 
+function mostraResposta(tag, texto) {
+    let campo = document.getElementById(tag);
+    campo.innerHTML = texto;
+}
+
 function btnCriptografar() {
     let texto = document.querySelector('.entrada__texto').value;
     validado(texto , 'criptografar');
     rola('.btn__copiar');
     desativDivIncial();
-   
-    
-
 }
 
 function btnDescriptografar() {
@@ -91,7 +83,6 @@ function btnDescriptografar() {
     validado(texto , 'descriptografar');
     rola('.btn__copiar');
     desativDivIncial();
-
 }
 
 function btnCopiar() {
@@ -104,11 +95,6 @@ function btnCopiar() {
         .catch(err => {
             console.error('Erro ao copiar texto: ', err);
         });
-};
-
-function mostraResposta(tag, texto) {
-    let campo = document.getElementById(tag);
-    campo.innerHTML = texto;
 }
 
 function removerSeletor(id, classe) {
@@ -116,9 +102,10 @@ function removerSeletor(id, classe) {
     elemento.classList.remove(classe);
 }
 
-function rola(tag){
-    document.querySelector(tag).scrollIntoView({behavior:'smooth'})
+function rola(tag) {
+    document.querySelector(tag).scrollIntoView({behavior:'smooth'});
 }
+
 function desativDivIncial() {
     document.getElementById("img_res").style.display = "none";
     document.getElementById("texto_res").style.display = "none";
@@ -126,17 +113,3 @@ function desativDivIncial() {
     removerSeletor('copiar', 'desativado');
     removerSeletor('resposta', 'desativado');
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
