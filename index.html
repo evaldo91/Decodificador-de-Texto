@@ -19,32 +19,24 @@
 
             </div>
             <div class="main ">
-                <div class="row justify-content-evenly">
+                <div class="row">
                     <div class="col-xxl-7">
-                        <div class="row">
-                            <div class="col-xxl-12 entradar">
+                            
                                 <textarea class="entrada__texto" id="entrada"></textarea>
-                            </div>
-                            <div class="col-xxl-12 my-1 entrada__button">    
                                 <button class="btn btns btn__crip" onclick="btnCriptografar()">Criptografar</button>
                                 <button class="btn btns btn__desc" onclick="btnDescriptografar()">Descriptografar</button>
-                            </div>
-                        </div>
+                            
                     </div>
                     <div class="col-xxl-3 resposta">
-                        <div class="row">
-                            <div class="col-xxl-12 saida">
                                     <img id="img_res" class="saida_img" src="./assets/img/high.svg" alt="">
                                     <h2 id="texto_res">Nenhuma mensagem encontrada</h2>
-                                    <p id="texto_res">Digite um texto que você deseja criptografar ou descriptografar.</p>
+                                    <p id="p_res">Digite um texto que você deseja criptografar ou descriptografar.</p>
                                     <textarea class="saida__texto desativado" id="resposta" readonly ></textarea>
                                 <button class="btn btns btn__copiar desativado" onclick="btnCopiar()" id="copiar">copiar</button>
                             
                                
                               
-                            </div>
                             
-                        </div>
                     </div>
 
                 </div>

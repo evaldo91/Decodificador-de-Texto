@@ -37,8 +37,10 @@ function rola(tag){
 function desativDivIncial(){
     const imgRes = document.getElementById("img_res");
     const element = document.getElementById("texto_res");
+    const pRes = document.getElementById("p_res");
     imgRes.remove();
-    imgRes.remove();
+    element.remove();
+    pRes.remove();
     removerSeletor('copiar', 'desativado');
     removerSeletor('resposta', 'desativado');
 
