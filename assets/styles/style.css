@@ -159,17 +159,18 @@ body{
 
 @media (max-width: 576px){
     .entrada__texto{
-        height: 360px;
+        height: 260px;
         width: 100%;
 
     }
     .saida__texto{
         width: 100%;
-        height: 500px;
+        height: 260px;
         
     }
     .btns{
         width: 100%;
+        margin-top: 1%;
     }
 
 }
