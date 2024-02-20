@@ -23,7 +23,6 @@ function criptografia(texto) {
     });
 
     mostraResposta('resposta', separadorTexto.join(''));
-    removerSeletor('copiar', 'invisible');
-    removerSeletor('sr', 'desativado');
+    
     
 }

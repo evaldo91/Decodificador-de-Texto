@@ -16,8 +16,7 @@ function descriptografia(texto) {
     }
 
     mostraResposta('resposta', texto);
-    removerSeletor('copiar', 'invisible');
-    removerSeletor('sr', 'desativado');
+
   
     
 }
